@@ -8,3 +8,6 @@ info={
 df=pd.DataFrame(info)
 print(df)
 df.to_csv("Info.csv")
+# Index remove krna to
+
+df.to_csv("Info_withoutindex.csv",index=False)
