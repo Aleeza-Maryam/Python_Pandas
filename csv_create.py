@@ -11,3 +11,7 @@ df.to_csv("Info.csv")
 # Index remove krna to
 
 df.to_csv("Info_withoutindex.csv",index=False)
+
+# header change krna
+
+df.to_csv("Info_header.csv",index=False,header=[1,2,3])
