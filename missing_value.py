@@ -29,3 +29,33 @@ print(var5)
 
 var6=var.dropna(thresh=1)
 print(var6)
+
+# FILLna us value ko fill krne k liye
+var.fillna("python")
+print(var)
+
+# particular column k andr fillna
+var.fillna({
+    "name ":"python"
+})
+print(var)
+print("HY")
+
+# forwardfill method se missing value ko previous value se fill krna aur backward fill method se next value se fill krna
+var.fillna(method="ffill")
+print(var)
+var.fillna(method="bfill")
+print(var)
+
+# kisi column k along
+var.fillna(method="ffill",axis=1)
+print(var)
+
+# inplace jhn pe NaN hai whn fill
+var.fillna(12,inplace=True)
+print(var)
+
+
+# limit parameter se kitni values fill krni hai
+var.fillna("python",limit=2)
+print(var)
