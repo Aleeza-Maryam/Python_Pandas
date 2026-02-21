@@ -16,6 +16,7 @@ x=[1,2,3,4,5]
 var=pd.Series(x,index=['a','b','c','d','e'])
 print(var)
 print(type(var))
+var1=pd.Series(x,index=['a','b','c','d','e'],name="python")
 
 
 # datatype k chnage krna aur name dena 
