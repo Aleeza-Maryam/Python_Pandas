@@ -30,3 +30,29 @@ print(var5)
 # ffill
 var6=var.replace("Zoya",method="ffill")
 print(var6)
+
+# limit parameter se kitni values replace krni hai
+var.replace(23,method="bfill",limit=1)
+
+# inplace parameter se original data change ho jata hai
+var.replace(23,method="bfill",inplace=True)
+
+# interpolate method se missing value ko fill krna
+# blank value k automatically fll krta hai previos value se uske accrding
+
+print(var)
+var8=var.interpolate()
+print(var8)
+
+# axis aur method parameter k sath interpolate
+var9=var.interpolate(method="linear",axis=0)
+print(var9)
+# limiy directed interpolation
+var10=var.interpolate(method="linear",limit_direction="forward",limit=1)
+var11=var.interpolate(method="linear",limit_direction="backward",limit=1)
+var12=var.interpolate(method="linear",limit_direction="both",limit=1)
+print(var10)
+print(var11)
+print(var12)
+var.interpolate(limit_area="outside")  #  NaN ko fill ni kre ga
+var.interpolate(limit_area="inside")  #  NaN ko fill kre ga
