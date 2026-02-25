@@ -30,3 +30,31 @@ var4=pd.DataFrame(
     }
 )
 print(pd.merge(var3,var4,on="A"))
+var5=pd.DataFrame(
+    {
+        "A":[1,2,3,4],
+        "B":[2,3,4,5]
+    }
+)
+var6=pd.DataFrame(
+    {
+        "A":[1,2,3,5],
+        "C":[6,7,8,9]
+    }
+)
+print(pd.merge(var5,var6,how="inner"))
+print(pd.merge(var5,var6,how="outer"))
+
+# Join Type	Kya karta hai
+# inner	Sirf matching rows
+# outer	Sab rows + NaN jahan data missing
+
+# konsa data merge huwa konsa nhi
+print(pd.merge(var5,var6,how="outer",indicator=True))
+print(pd.merge(var5,var6,left_index=True,right_index=True))
+print(pd.merge(var1,var2,left_index=True,right_index=True))
+# agr name cange krna ho t uske liye suffix
+print(pd.merge(var1,var2,left_index=True,right_index=True,suffixes=("name","python")))
+
+
+
