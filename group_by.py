@@ -25,3 +25,6 @@ print(var_new.min())
 print(var_new.max())
 
 
+# dataframe se list
+li=list(var_new)
+print
