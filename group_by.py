@@ -16,3 +16,12 @@ for x,y in var_new:
     print(x)   #name show ho ga
     print(y)   #name k hisab se data show ho ga
     print()
+
+# output mai index bhi show krwana to
+print(var_new.get_group("Ali"))
+# min max mean
+print(var_new.mean())
+print(var_new.min())
+print(var_new.max())
+
+
