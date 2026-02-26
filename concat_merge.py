@@ -97,3 +97,16 @@ d2=pd.DataFrame(
 )
 print(pd.concat([d1,d2],axis=1,join="outer"))   #Nan show hoga
 print(pd.concat([d1,d2],axis=1,join="inner"))   #Nan show nhi hoga 
+
+
+# keys bnana
+print(pd.concat([d1,d2],axis=1,keys=["first","second"])) 
+# 1 d aur 2d ko merge
+d3=pd.DataFrame({
+    'D':[1,2,3,4]
+})
+d4 = pd.DataFrame({
+    "A":[1,2,3,4],
+    "C":[6,7,8,9]
+})
+print(pd.concat([d3,d4]))
