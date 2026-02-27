@@ -69,3 +69,18 @@ var10=pd.DataFrame({
 
 print(var9.join(var10,how="outer",lsuffix="_left",rsuffix="_right"))
 
+
+# Append functon
+# Pandas ke latest versions (2.0+) me append() remove ho chuka hai.Agar aap new version use kar rahi hain to error aayega:
+var11=pd.DataFrame({
+    "A":[1,2,3,4],
+    "B":[11,12,13,14]
+},index=["A","B","C","D"])
+var12=pd.DataFrame({
+    "A":[16,17],
+    "D":[20,21]
+},index=["A","B"])
+# print(var11.append(var12))
+print(pd.concat([var11, var12]))
+print(pd.concat([var11, var12],ignore_index=True))
+
