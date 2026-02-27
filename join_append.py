@@ -40,3 +40,32 @@ var8=pd.DataFrame({
     "D":[20,21]
 },index=["A","B"])
 print(var7.join(var8))
+print(var7.join(var8,how="inner"))
+print(var7.join(var8,how="outer"))
+print(var7.join(var8,how="left"))
+print(var7.join(var8,how="right"))
+
+# # agr column name same ho to value error aae ga 
+# var9=pd.DataFrame({
+#     "A":[1,2,3,4],
+#     "B":[11,12,13,14]
+# },index=["A","B","C","D"])
+# var10=pd.DataFrame({
+#     "A":[16,17],
+#     "D":[20,21]
+# },index=["A","B"])
+
+# print(var9.join(var10))
+
+# isliye suffix use krein ge
+var9=pd.DataFrame({
+    "A":[1,2,3,4],
+    "B":[11,12,13,14]
+},index=["A","B","C","D"])
+var10=pd.DataFrame({
+    "A":[16,17],
+    "D":[20,21]
+},index=["A","B"])
+
+print(var9.join(var10,how="outer",lsuffix="_left",rsuffix="_right"))
+
