@@ -56,5 +56,18 @@ chest_target=dataset.groupby("target")["cp"].value_counts()
 fbs_target=dataset.groupby("target")["fbs"].value_counts()
 
 # Check Resting Blood Pressure Distribution
-rest_blood=dataset.transform.value_counts()
+rest_blood=dataset.value_counts()
 print(rest_blood)
+
+# Compare Resting Blood Pressure As Per Sex Column
+rest_bp=dataset.groupby("sex")["trestbps"].value_counts()
+print(rest_bp)
+
+# Show Distribution of Serum cholesterol
+serum_cholestrol=dataset.chol.value_counts()
+print(serum_cholestrol)
+
+# Plot Continuous Variables
+import matplotlib.pyplot as plt
+dataset.hist(figsize=(10,10))
+plt.show()
