@@ -37,3 +37,24 @@ print(f"{target} people have heart disease")
 # Find Count of  Male & Female in this Dataset
 gender=dataset.sex.value_counts()
 print(gender)
+
+# Find Gender Distribution According to The Target Variable
+gender_target=dataset.groupby("target")["sex"].value_counts()
+print(gender_target)
+
+# Check Age Distribution In The Dataset
+age_dist=dataset.age.value_counts()
+print(age_dist)
+
+# Check Chest Pain Type
+chest_pain=dataset.cp.value_counts()
+print(chest_pain)
+# Show The Chest Pain Distribution As Per Target Variable
+chest_target=dataset.groupby("target")["cp"].value_counts()
+
+#  Show Fasting Blood Sugar Distribution According To Target Variable
+fbs_target=dataset.groupby("target")["fbs"].value_counts()
+
+# Check Resting Blood Pressure Distribution
+rest_blood=dataset.transform.value_counts()
+print(rest_blood)
